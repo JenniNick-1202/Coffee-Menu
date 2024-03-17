@@ -87,6 +87,20 @@ h2 {
     justify-content: center;
 }
 
+@media (max-width: 1000px) {
+    .shop {
+        grid-template-columns: repeat (2, 223px);
+    }
+}
+
+@media (max-width: 500px) {
+    .shop {
+        grid-template-columns: repeat (1, 223px);
+    }
+}
+
+
+
 /*menu-card*/
 
 #menu-image {
@@ -100,6 +114,7 @@ h2 {
     border: 2px solid black;
     border-radius: 10px;
 }
+
 
 .menu-card-desc {
     display: flex;
