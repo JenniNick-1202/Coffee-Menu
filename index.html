@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
     <title>Coffee Menu</title>
 </head>
 <body>
@@ -32,24 +35,80 @@
 <div class="shop" id="shop">
 
     <div class="menu-card">
-        <img src="images/Americano.jpg" alt="Americano" width="150" id="menu-image"/>
+        <img src="images/Americano.jpg" alt="Americano" id="menu-image"/>
             <div class="menu-card-desc">
                     <h3 class="flavor">Americano</h3>
-                <p>Freshly brewed black coffee.</p>
-                 <select id="size">
-                    <option value="pleaseSelect">Please Select</option>
-                    <option value="small">Small</option>
-                    <option value="medium">Medium</option>
-                    <option value="large">Large</option>
+                    <p>Freshly brewed black coffee.</p>
+                    <select id="size">
+                        <option value="pleaseSelect">Please Select</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
                  </select>
-            <p class="price" id="price-display"></p>
             <button type="button" id="select-button" onclick="selectItem()">Yes Please!</button>
+            <p class="price" id="price-display"></p>
             <button type="button" id="add-to-basket-button" onclick="addToBasket()">Add to Basket</button>
         </div>
+    </div>
+
+        <div class="menu-card">
+            <img src="images/Americano.jpg" alt="Americano" width="220" id="menu-image"/>
+                <div class="menu-card-desc">
+                        <h3 class="flavor">Americano</h3>
+                    <p>Freshly brewed black coffee.</p>
+                     <select id="size">
+                        <option value="pleaseSelect">Please Select</option>
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                     </select>
+                <p class="price" id="price-display"></p>
+                <button type="button" id="select-button" onclick="selectItem()">Yes Please!</button>
+                <button type="button" id="add-to-basket-button" onclick="addToBasket()">Add to Basket</button>
+            </div>
+        </div>
+
+            <div class="menu-card">
+                <img src="images/Americano.jpg" alt="Americano" width="220" id="menu-image"/>
+                    <div class="menu-card-desc">
+                            <h3 class="flavor">Americano</h3>
+                        <p>Freshly brewed black coffee.</p>
+                         <select id="size">
+                            <option value="pleaseSelect">Please Select</option>
+                            <option value="small">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                         </select>
+                    <p class="price" id="price-display"></p>
+                    <button type="button" id="select-button" onclick="selectItem()">Yes Please!</button>
+                    <button type="button" id="add-to-basket-button" onclick="addToBasket()">Add to Basket</button>
+                </div>
+            </div>
+
+
+                <div class="menu-card">
+                    <img src="images/Americano.jpg" alt="Americano" width="220" id="menu-image"/>
+                        <div class="menu-card-desc">
+                                <h3 class="flavor">Americano</h3>
+                            <p>Freshly brewed black coffee.</p>
+                             <select id="size">
+                                <option value="pleaseSelect">Please Select</option>
+                                <option value="small">Small</option>
+                                <option value="medium">Medium</option>
+                                <option value="large">Large</option>
+                             </select>
+                        <p class="price" id="price-display"></p>
+                        <button type="button" id="select-button" onclick="selectItem()">Yes Please!</button>
+                        <button type="button" id="add-to-basket-button" onclick="addToBasket()">Add to Basket</button>
+                    </div>
+                    </div>
+
+
+
+
+
 
 </div>
-
-
 <script src="script.js"></script>
 </body>
 </html>

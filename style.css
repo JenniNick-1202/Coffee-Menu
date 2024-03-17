@@ -1,5 +1,161 @@
 * {
     border: 0;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: "Merienda", cursive;
+}
+
+body {
+    background-image: url(https://th.bing.com/th/id/R.81e623a6382a900a71eaef5bb3f35760?rik=64lkxPgo74u8lA&riu=http%3a%2f%2fwww.photos-public-domain.com%2fwp-content%2fuploads%2f2011%2f02%2fwhite-parchment-paper-texture.jpg&ehk=pvq1oE%2fcczfQW0ndE3y1Uf3Zil9ujDhH6su%2fSkMVAUw%3d&risl=&pid=ImgRaw&r=0);
+}
+
+/*navbar*/
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: rgb(250,116,116);
+    background: linear-gradient(90deg, rgba(250,116,116,1) 0%, rgba(255,237,127,1) 100%);
+    color:black;
+    padding: 25px 60px;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 30px;  
+}
+
+.basket {
+    position: relative;
+    font-size: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.basket:hover {
+    color: rgb(250,116,116);
+}
+
+.basketAmt {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.basketAmt:hover {
+    background-color: rgb(250,116,116);
+}
+
+/*Menu Header*/
+
+#menu-header {
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+/*menu-item*/
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+/*shop*/
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
+    justify-content: center;
+}
+
+/*menu-card*/
+
+#menu-image {
+    width: 220px;
+    height: 200px;
+    object-fit: cover; 
+    overflow: hidden;
+}
+
+.menu-card {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.menu-card-desc {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+#size {
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#size:hover {
+    cursor: pointer;
+    background-color: rgb(255,237,127);
+}
+
+#select-button {
+    background-color: antiquewhite;
+    color: black;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#select-button:hover {
+    background-color: rgb(255,237,127);
+}
+
+#price-display {
+    font-weight: bold;
+    font-size: 20px;
+    color: brown;
+}
+
+#add-to-basket-button {
+    background-color: antiquewhite;
+    color: black;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#add-to-basket-button:hover {
+    background-color: rgb(255,237,127);
 }
