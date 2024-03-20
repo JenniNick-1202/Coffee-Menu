@@ -6,28 +6,32 @@ let shopItemsData = [ {
     size: ["small", "medium", "large"], 
     price: [2.50, 3.00, 3.50],
     desc: "Our freshly brewed signature black coffee.",
-    images: "images/Americano.jpg"
+    images: "images/Americano.jpg",
+    quantity: 1
 }, {
     id: "flatWhite",
     name: "FlatWhite", 
     size: ["small", "medium", "large"], 
     price: [2.50, 3.00, 3.50],
     desc: "Freshly brewed black coffee with steamed milk.",
-    images: "images/flatWhite.jpg"
+    images: "images/flatWhite.jpg",
+    quantity: 1
 }, {
      id: "latte",
     name: "Latte", 
     size: ["small", "medium", "large"], 
     price: [3.00, 3.50, 4.00],
     desc: "Our signature coffee, a creamy and frothy delight.",
-    images: "images/latte.jpg"
+    images: "images/latte.jpg",
+    quantity: 1
 }, {
     id: "cappuccino",
     name: "Cappuccino", 
     size: ["small", "medium", "large"], 
     price: [3.00, 3.50, 4.00],
     desc: "Our signature coffee with steamed and foamed milk.",
-    images: "images/Cappuccino.jpg"
+    images: "images/Cappuccino.jpg",
+    quantity: 1
 },
 ];
 
@@ -49,7 +53,7 @@ let generateShop = () => {
                  </select>
             <p class="price" id="price-display-${id}"></p>
             <button type="button" id="add-to-basket-button" onclick="addToBasket('${id}')">Add to Basket</button>
-        </div>
+            </div>
     </div>
         `;
     }).join(""));
@@ -78,4 +82,17 @@ let displayPrice = (size, id) => {
 generateShop();
 
 
+function addToBasket(itemId) {
+    // Get the selected size from the dropdown
+    const sizeDropdown = document.getElementById('size');
+    const selectedSize = sizeDropdown.value;
 
+    if (selectedSize === 'pleaseSelect') {
+        alert('Please select a size before adding to the basket.');
+        return;
+    }
+
+    const addToBasketButton = document.getElementById('add-to-basket-button');
+    addToBasketButton.textContent = 'Added!'; 
+}
+console.log(shopItemsData);
