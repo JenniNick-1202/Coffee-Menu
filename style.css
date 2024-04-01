@@ -129,14 +129,15 @@ h3 {
     font-size: 24px;
 }
 
-#size {
+.size {
     text-align: center;
-    background-color: antiquewhite;
+    background-color: white;
+    font-weight: bold;
     padding: 5px;
     font-size: 16px;
 }
 
-#size:hover {
+.size:hover {
     cursor: pointer;
     background-color: rgb(255,237,127);
 }
@@ -146,7 +147,7 @@ h3 {
     color: black;
     padding: 5px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -155,14 +156,15 @@ h3 {
     background-color: rgb(255,237,127);
 }
 
-#price-display {
+.price {
     font-weight: bold;
     font-size: 20px;
-    color: brown;
+    color: black;
+    background-color: white;
 }
 
-#add-to-basket-button {
-    background-color: antiquewhite;
+.add-to-basket-button {
+    background-color: white;
     color: black;
     padding: 5px;
     border-radius: 4px;
@@ -171,6 +173,6 @@ h3 {
     cursor: pointer;
 }
 
-#add-to-basket-button:hover {
+.add-to-basket-button:hover {
     background-color: rgb(255,237,127);
 }

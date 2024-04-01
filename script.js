@@ -1,23 +1,26 @@
 let shop = document.getElementById("shop");
+let sizeDropdown;
+let basket =[];
+
 
 let shopItemsData = [ {
     id: "americano",
     name: "Americano", 
     size: ["small", "medium", "large"], 
     price: [2.50, 3.00, 3.50],
-    desc: "Our freshly brewed signature black coffee.",
+    desc: "Our freshly brewed signature black coffee, perfectly brewed.",
     images: "images/Americano.jpg",
     quantity: 1
 }, {
     id: "flatWhite",
-    name: "FlatWhite", 
+    name: "Flat White", 
     size: ["small", "medium", "large"], 
     price: [2.50, 3.00, 3.50],
     desc: "Freshly brewed black coffee with steamed milk.",
     images: "images/flatWhite.jpg",
     quantity: 1
 }, {
-     id: "latte",
+    id: "latte",
     name: "Latte", 
     size: ["small", "medium", "large"], 
     price: [3.00, 3.50, 4.00],
@@ -45,14 +48,14 @@ let generateShop = () => {
             <div class="menu-card-desc">
                     <h3 class="flavor">${name}</h3>
                     <p>${desc}</p>
-                    <select id="size" onchange="displayPrice(this.value, '${id}')">
+                    <select id="size-${id}" class="size" onchange="displayPrice(this.value, '${id}')">
                         <option value="pleaseSelect">Please Select</option>
                         <option value="small">Small</option>
                         <option value="medium">Medium</option>
                         <option value="large">Large</option>
                  </select>
             <p class="price" id="price-display-${id}"></p>
-            <button type="button" id="add-to-basket-button" onclick="addToBasket('${id}')">Add to Basket</button>
+            <button type="button" class ="add-to-basket-button" id="add-to-basket-${id}" onclick="addToBasket('${id}')">Add to Basket</button>
             </div>
     </div>
         `;
@@ -62,7 +65,7 @@ let generateShop = () => {
 let displayPrice = (size, id) => {
     let item = shopItemsData.find(x => x.id === id);
     let price;
-    switch(size) {
+    switch (size) {
         case 'small':
             price = item.price[0];
             break;
@@ -81,10 +84,8 @@ let displayPrice = (size, id) => {
 
 generateShop();
 
-
 function addToBasket(itemId) {
-    // Get the selected size from the dropdown
-    const sizeDropdown = document.getElementById('size');
+    const sizeDropdown = document.getElementById(`size-${itemId}`);
     const selectedSize = sizeDropdown.value;
 
     if (selectedSize === 'pleaseSelect') {
@@ -92,7 +93,12 @@ function addToBasket(itemId) {
         return;
     }
 
-    const addToBasketButton = document.getElementById('add-to-basket-button');
-    addToBasketButton.textContent = 'Added!'; 
+    const addToBasketButton = document.getElementById(`add-to-basket-${itemId}`);
+    button.innerText = "Added!";
+
 }
-console.log(shopItemsData);
+
+function addToBasket(itemId) {
+    const button = document.getElementById(`add-to-basket-${itemId}`);
+    button.innerText = "Added!";
+}
